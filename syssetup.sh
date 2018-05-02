@@ -147,7 +147,7 @@ clear
 print_status "Installing cron for watchdog and syscoind, setting up FW and fail2ban"
 sleep 5
 
-(crontab -l; echo "* * * * * cd $HOME/syscoin/src/sentinel && ./venv/bin/python $HOME/syscoin/src/sentinel/bin/sentinel.py 2>&1 >> $HOME/sentinel-cron.log" ) | crontab -
+(crontab -l; echo "*/10 * * * * cd $HOME/syscoin/src/sentinel && ./venv/bin/python $HOME/syscoin/src/sentinel/bin/sentinel.py 2>&1 >> $HOME/sentinel-cron.log" ) | crontab -
 (crontab -l; echo "@reboot $HOME/syscoin/src/syscoind -daemon") | crontab -
 crontab -l
 
@@ -162,7 +162,7 @@ yes | sudo ufw enable
 
 clear
 
-(crontab -l; echo "* * * * * cd $HOME/syscoin/src/sentinel && ./venv/bin/python $HOME/syscoin/src/sentinel/bin/sentinel.py 2>&1 >> $HOME/sentinel-cron.log" ) | crontab -
+(crontab -l; echo "*/10 * * * * cd $HOME/syscoin/src/sentinel && ./venv/bin/python $HOME/syscoin/src/sentinel/bin/sentinel.py 2>&1 >> $HOME/sentinel-cron.log" ) | crontab -
 (crontab -l; echo "@reboot $HOME/syscoin/src/syscoind -daemon") | crontab -
 crontab -l
 
