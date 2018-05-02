@@ -1,7 +1,8 @@
 # Sys node setup install script
 EZ Install script for sys nodes
 
--Adds 4G swap if not present  
+-Adds 4G swap if not present
+-Sets ip automatically  
 -Updates VPS  
 -Downloads all dependencies / builds syscoin  
 -Installs optional fail2ban  
