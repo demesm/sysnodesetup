@@ -5,6 +5,7 @@ EZ Install script for sys nodes
 -Sets ip automatically  
 -Updates VPS  
 -Downloads all dependencies / builds syscoin  
+-Installs sentinel, creates cronjob  
 -Installs optional fail2ban  
 -Sets firewall rules  
 -Randomizes rpc password  
