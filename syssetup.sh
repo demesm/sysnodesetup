@@ -85,7 +85,10 @@ sleep 5
 clear
 print_status "Final build stage... go play outside for a while"
 sleep 5
-make
+# speed up builds if you have more cores
+BUILD_CORES=$(cat /proc/cpuinfo | grep processor | wc -l)
+print_status "Compiling from source with $BUILD_CORES core(s)"
+make -j$BUILD_CORES
 clear
 
 mkdir $HOME/.syscoincore
