@@ -155,14 +155,24 @@ sleep 5
 (crontab -l; echo "@reboot $HOME/syscoin/src/syscoind -daemon") | crontab -
 crontab -l
 
-sudo apt-get install fail2ban -y
-sudo service fail2ban restart
-sudo apt-get install ufw -y
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-sudo ufw allow ssh
-sudo ufw allow 8369/tcp
-yes | sudo ufw enable
+if [ $install_fail2ban == "y" ] || [ $install_fail2ban == "Y" ]
+then
+    print_status "installing f2b"
+    sudo apt-get install fail2ban -y
+    sudo service fail2ban restart
+fi
+
+if [ $UFW == "y" ] || [ $UFW == "Y" ]
+then
+    print_status "installing UFW"
+    sudo apt-get install ufw -y
+    sudo ufw default deny incoming
+    sudo ufw default allow outgoing
+    sudo ufw allow ssh
+    sudo ufw allow 8369/tcp
+    yes | sudo ufw enable
+fi
+
 
 clear
 
