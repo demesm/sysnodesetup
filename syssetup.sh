@@ -90,6 +90,9 @@ BUILD_CORES=$(cat /proc/cpuinfo | grep processor | wc -l)
 print_status "Compiling from source with $BUILD_CORES core(s)"
 make -j$BUILD_CORES
 clear
+print_status "Installing syscoin and syscoin-cli binaries."
+sudo make install
+clear
 
 mkdir $HOME/.syscoincore
 cat <<EOF > $HOME/.syscoincore/syscoin.conf
@@ -113,8 +116,6 @@ clear
 print_status "Adding binaries to path, starting syscoind"
 sleep 5
 
-sudo ln -s $HOME/syscoin/src/syscoind /usr/local/bin/syscoind
-sudo ln -s $HOME/syscoin/src/syscoin-cli /usr/local/bin/syscoin-cli
 syscoind
 
 clear
