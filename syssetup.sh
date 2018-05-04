@@ -21,6 +21,8 @@ print_status "Restart SyscoinQT then return here"
 
 
 #read -e -p "Server IP Address : " ip
+UFW="Y"
+install_fail2ban="Y"
 ip=$(hostname -I | awk {'print $1'})
 read -e -p "Masternode Private Key (From windows QT)) : " key
 read -e -p "Install Fail2ban? [Y/n] : " install_fail2ban
