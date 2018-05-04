@@ -165,10 +165,6 @@ yes | sudo ufw enable
 
 clear
 
-(crontab -l; echo "*/10 * * * * cd $HOME/syscoin/src/sentinel && ./venv/bin/python $HOME/syscoin/src/sentinel/bin/sentinel.py 2>&1 >> $HOME/sentinel-cron.log" ) | crontab -
-(crontab -l; echo "@reboot $HOME/syscoin/src/syscoind -daemon") | crontab -
-crontab -l
-
 syscoin-cli mnsync status
 syscoin-cli masternode status
 
