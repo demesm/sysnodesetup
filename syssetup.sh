@@ -68,7 +68,7 @@ clear
 print_status "Installing dependencies"
 sleep 5
 
-git clone https://github.com/syscoin/syscoin -b 3.0
+git clone https://github.com/syscoin/syscoin.git
 cd syscoin
 sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libboost-all-dev libminiupnpc-dev -y
 sudo apt-get install software-properties-common -y
