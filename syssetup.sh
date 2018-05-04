@@ -113,7 +113,7 @@ port=8369
 EOF
 
 clear
-print_status "Adding binaries to path, starting syscoind"
+print_status "Starting syscoind"
 sleep 5
 
 syscoind
