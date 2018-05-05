@@ -19,7 +19,7 @@ sudo ./syssetup.sh
 sudo ./syssetup.sh -update
 
 
-Please READ all of the words at the beginning of the script. Make sure you do what it says and have information ready beforehand.
+# Please READ all of the words at the beginning of the script. Make sure you do what it says and have information ready beforehand.
 
 If you have sent your 100,000SYS to the MN address already you can run this and proceed to finish what needs to be done in QT. Once the script is done running, you can start your MN and be done with it, EZ!
 
