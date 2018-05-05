@@ -16,7 +16,7 @@ sudo chmod 755 syssetup.sh
 sudo ./syssetup.sh
 
 # To update to most recent:
-cd ~/syscoin
+cd ~/syscoin  
 sudo ./syssetup.sh -update
 
 
