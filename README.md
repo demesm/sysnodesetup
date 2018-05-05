@@ -10,17 +10,8 @@ Fully automated EZ Install script for sys nodes
 -Sets firewall rules  
 -Randomizes rpc password  
 
-# To run clean install:
-wget https://raw.githubusercontent.com/demesm/sysnodesetup/master/syssetup.sh  
-sudo chmod 755 syssetup.sh  
-sudo ./syssetup.sh
-
-# To update to most recent:
-cd ~/syscoin  
-sudo ./syssetup.sh -update
-
-
 # Please READ all of the words at the beginning of the script. Make sure you do what it says and have information ready beforehand.
+# Install as normal user not root!
 
 If you have sent your 100,000SYS to the MN address already you can run this and proceed to finish what needs to be done in QT. Once the script is done running, you can start your MN and be done with it, EZ!
 
@@ -31,4 +22,13 @@ Everything on the VPS is automated after the 1st prompts.
 
 If this helped you consider tossing some sys my way!  
 SkSsc5DDejrXq2HfRf9B9QDqHrNiuUvA9Y
- 
+
+# To run clean install:
+wget https://raw.githubusercontent.com/demesm/sysnodesetup/master/syssetup.sh  
+sudo chmod 755 syssetup.sh  
+sudo ./syssetup.sh
+
+# To update to most recent:
+cd ~/syscoin  
+sudo ./syssetup.sh -update
+
