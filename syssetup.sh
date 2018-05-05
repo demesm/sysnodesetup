@@ -9,6 +9,7 @@ update_node() {
 	./autogen.sh
 	./configure
 	make -j$BUILD_CORES
+	sudo make install
 	syscoind
 	exit
 }
