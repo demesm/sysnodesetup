@@ -3,9 +3,9 @@
 update_node() {
 	BUILD_CORES=$(cat /proc/cpuinfo | grep processor | wc -l)
 	cd $HOME/syscoin
+	syscoin-cli stop
 	git checkout master
 	git pull
-	syscoin-cli stop
 	./autogen.sh
 	./configure
 	make -j$BUILD_CORES
