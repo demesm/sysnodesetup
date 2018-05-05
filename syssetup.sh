@@ -118,6 +118,7 @@ cat <<EOF > $HOME/.syscoincore/syscoin.conf
 rpcuser=user
 rpcpassword=$rpcpassword
 rpcallowip=127.0.0.1
+rpcbind=127.0.0.1
 #
 listen=1
 server=1
