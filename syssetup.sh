@@ -1,15 +1,30 @@
 #!/bin/bash
+
+update_node() {
+	BUILD_CORES=$(cat /proc/cpuinfo | grep processor | wc -l)
+	cd $HOME/syscoin
+	git checkout master
+	git pull
+	syscoin-cli stop
+	./autogen.sh
+	./configure
+	make -j$BUILD_CORES
+	syscoind
+	exit
+}
+
 pause(){
- read -n1 -rsp $'Press any key to continue or Ctrl+C to exit...\n'
+	read -n1 -rsp $'Press any key to continue or Ctrl+C to exit...\n'
 }
 
 print_status() {
     echo "## $1"
 }
 
-
-#<UDF name="key" Label="masternode genkey" default=""/>
-
+if [[ $1 == "-update" ]]
+then
+	update_node
+fi
 
 clear
 print_status "Before starting script ensure you have: "
