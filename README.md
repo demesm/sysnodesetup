@@ -10,10 +10,14 @@ Fully automated EZ Install script for sys nodes
 -Sets firewall rules  
 -Randomizes rpc password  
 
-# To run:
+# To run clean install:
 wget https://raw.githubusercontent.com/demesm/sysnodesetup/master/syssetup.sh  
 sudo chmod 755 syssetup.sh  
 sudo ./syssetup.sh
+
+# To update to most recent:
+sudo ./syssetup.sh -update
+
 
 Please READ all of the words at the beginning of the script. Make sure you do what it says and have information ready beforehand.
 
